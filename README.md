@@ -8,6 +8,7 @@ This is a package containing a pipelined function for analysis of any network th
 See 'PL/SQL Pipelined Function for Network Analysis'
     http://aprogrammerwrites.eu/?p=1426
 
+<pre>
 SQL
 ===
 SELECT root_node_id             "Network",
@@ -47,7 +48,7 @@ COUNTRIES|HR      21      16   0  COUNTRIES|HR                             ROOT
                                1  > REGIONS|HR                             countr_reg_fk|hr
 
 1 of 69 subnetworks is shown above
-
+</pre>
 Pre-requisites
 ==============
 The package just requires a sufficiently recent version of Oracle,a nd the creation of the view against some network source data. I believe it should work from v10.1 upwards at least and on any edition including XE.
