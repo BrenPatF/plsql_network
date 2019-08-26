@@ -1,0 +1,33 @@
+
+Database             Time                 Version
+-------------------- -------------------- ------------------------------
+Start: ORCL          26-AUG-2019 06:59:47 Version 18.3.0.0.0
+
+Create view links_v in lib schema (will be superseded by any view of same name defined in calling schema)
+
+View created.
+
+Create package Net_Pipe
+
+Package created.
+
+No errors.
+
+Package body created.
+
+No errors.
+Grant access to app (skip if none passed)
+
+PL/SQL procedure successfully completed.
+
+Granting Net_Pipe components to app..
+old   1: GRANT EXECUTE ON Net_Pipe TO &app
+new   1: GRANT EXECUTE ON Net_Pipe TO app
+
+Grant succeeded.
+
+
+'END:'||TO_CHAR(SYSDATE,'DD-MON-YY
+----------------------------------
+End: 26-AUG-2019 06:59:47
+

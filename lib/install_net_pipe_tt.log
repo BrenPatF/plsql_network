@@ -1,0 +1,34 @@
+
+Database             Time                 Version
+-------------------- -------------------- ------------------------------
+Start: ORCL          26-AUG-2019 07:04:15 Version 18.3.0.0.0
+
+Create empty links table in lib schema
+DROP TABLE network_links
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+
+Table created.
+
+Create package tt_net_pipe
+
+Package created.
+
+
+Package body created.
+
+No errors.
+Add the tt_units record, reading in JSON file from INPUT_DIR
+old   3:   Trapit.Add_Ttu ('TT_NET_PIPE', 'ALL_NETS', '&LIB', 'Y', 'tt_net_pipe.all_nets_inp.json');
+new   3:   Trapit.Add_Ttu ('TT_NET_PIPE', 'ALL_NETS', 'lib', 'Y', 'tt_net_pipe.all_nets_inp.json');
+
+PL/SQL procedure successfully completed.
+
+
+'END:'||TO_CHAR(SYSDATE,'DD-MON-YY
+----------------------------------
+End: 26-AUG-2019 07:04:15
+

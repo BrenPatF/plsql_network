@@ -1,0 +1,81 @@
+
+Database             Time                 Version
+-------------------- -------------------- ------------------------------
+Start: ORCL          26-AUG-2019 07:00:29 Version 18.3.0.0.0
+
+View links_v based on fk_links
+
+View created.
+
+Network detail
+
+Network                                     #Links  #Nodes    Lev Node                                                                   Link
+------------------------------------------ ------- ------- ------ ---------------------------------------------------------------------- ------------------------------------------
+DR$THS_PHRASE|CTXSYS                             1       2      0 DR$THS_PHRASE|CTXSYS                                                   ROOT
+                                                                1 > DR$THS|CTXSYS                                                        sys_c005869|ctxsys
+LOG_HEADERS|BENCH                                1       2      0 LOG_HEADERS|BENCH                                                      ROOT
+                                                                1 < LOG_LINES|BENCH                                                      lin_hdr_fk|bench
+OGIS_GEOMETRY_COLUMNS|MDSYS                      1       2      0 OGIS_GEOMETRY_COLUMNS|MDSYS                                            ROOT
+                                                                1 > OGIS_SPATIAL_REFERENCE_SYSTEMS|MDSYS                                 fk_srid|mdsys
+SDO_COORD_AXES|MDSYS                            31      15      0 SDO_COORD_AXES|MDSYS                                                   ROOT
+                                                                1 > SDO_COORD_AXIS_NAMES|MDSYS                                           coord_axis_foreign_axis|mdsys
+                                                                1 > SDO_COORD_SYS|MDSYS                                                  coord_axis_foreign_cs|mdsys
+                                                                2   < SDO_COORD_REF_SYS|MDSYS                                            coord_ref_sys_foreign_cs|mdsys
+                                                                3     < SDO_COORD_OPS|MDSYS                                              coord_operation_foreign_source|mdsys
+                                                                4       = SDO_COORD_OPS|MDSYS*                                           coord_operation_foreign_legacy|mdsys
+                                                                4       > SDO_COORD_OP_METHODS|MDSYS                                     coord_operation_foreign_method|mdsys
+                                                                5         < SDO_COORD_OP_PARAM_USE|MDSYS                                 coord_op_para_use_foreign_meth|mdsys
+                                                                6           > SDO_COORD_OP_PARAMS|MDSYS                                  coord_op_para_use_foreign_para|mdsys
+                                                                7             < SDO_COORD_OP_PARAM_VALS|MDSYS                            coord_op_para_val_foreign_para|mdsys
+                                                                8               > SDO_COORD_OPS|MDSYS*                                   coord_op_para_val_foreign_op|mdsys
+                                                                8               > SDO_COORD_OP_METHODS|MDSYS*                            coord_op_para_val_foreign_meth|mdsys
+                                                                8               > SDO_UNITS_OF_MEASURE|MDSYS                             coord_op_para_val_foreign_uom|mdsys
+                                                                9                 < SDO_COORD_AXES|MDSYS*                                coord_axis_foreign_uom|mdsys
+                                                                9                 > SDO_ELLIPSOIDS|MDSYS                                 ellipsoid_foreign_legacy|mdsys
+                                                               10                   < SDO_DATUMS|MDSYS                                   datum_foreign_ellipsoid|mdsys
+                                                               11                     < SDO_COORD_REF_SYS|MDSYS*                         coord_ref_sys_foreign_datum|mdsys
+                                                               11                     = SDO_DATUMS|MDSYS*                                datum_foreign_legacy|mdsys
+                                                               11                     > SDO_PRIME_MERIDIANS|MDSYS                        datum_foreign_meridian|mdsys
+                                                               12                       > SDO_UNITS_OF_MEASURE|MDSYS*                    prime_meridian_foreign_uom|mdsys
+                                                               10                   > SDO_UNITS_OF_MEASURE|MDSYS*                        ellipsoid_foreign_uom|mdsys
+                                                                9                 = SDO_UNITS_OF_MEASURE|MDSYS*                          unit_of_measure_foreign_legacy|mdsys
+                                                                9                 = SDO_UNITS_OF_MEASURE|MDSYS*                          unit_of_measure_foreign_uom|mdsys
+                                                                4       > SDO_COORD_REF_SYS|MDSYS*                                       coord_operation_foreign_target|mdsys
+                                                                4       < SDO_COORD_REF_SYS|MDSYS*                                       coord_ref_sys_foreign_proj|mdsys
+                                                                3     < SDO_COORD_OP_PATHS|MDSYS                                         coord_op_path_foreign_source|mdsys
+                                                                4       > SDO_COORD_REF_SYS|MDSYS*                                       coord_op_path_foreign_target|mdsys
+                                                                3     = SDO_COORD_REF_SYS|MDSYS*                                         coord_ref_sys_foreign_geog|mdsys
+                                                                3     = SDO_COORD_REF_SYS|MDSYS*                                         coord_ref_sys_foreign_horiz|mdsys
+                                                                3     = SDO_COORD_REF_SYS|MDSYS*                                         coord_ref_sys_foreign_legacy|mdsys
+                                                                3     = SDO_COORD_REF_SYS|MDSYS*                                         coord_ref_sys_foreign_vert|mdsys
+                                                                3     < SDO_SRIDS_BY_URN|MDSYS                                           sys_c006526|mdsys
+SDO_WS_CONFERENCE_PARTICIPANTS|MDSYS             1       2      0 SDO_WS_CONFERENCE_PARTICIPANTS|MDSYS                                   ROOT
+                                                                1 > SDO_WS_CONFERENCE|MDSYS                                              sdo_ws_conf_part_fk|mdsys
+
+40 rows selected.
+
+Elapsed: 00:00:00.05
+Network summary 1 - by subnetwork
+
+Network                                     #Links  #Nodes    Max Lev
+------------------------------------------ ------- ------- ----------
+DR$THS_PHRASE|CTXSYS                             2       2          1
+LOG_HEADERS|BENCH                                2       2          1
+SDO_WS_CONFERENCE_PARTICIPANTS|MDSYS             2       2          1
+OGIS_GEOMETRY_COLUMNS|MDSYS                      2       2          1
+SDO_COORD_AXES|MDSYS                            32      15         12
+
+Elapsed: 00:00:00.00
+Network summary 2 - grouped by numbers of nodes
+
+ #Nodes  #Networks
+------- ----------
+      2          4
+     15          1
+
+Elapsed: 00:00:00.01
+
+'END:'||TO_CHAR(SYSDATE,'DD-MON-YY
+----------------------------------
+End: 26-AUG-2019 07:00:29
+
