@@ -1,0 +1,67 @@
+
+Database             Time                 Version
+-------------------- -------------------- ------------------------------
+Start: ORCL          26-AUG-2019 07:00:43 Version 18.3.0.0.0
+
+Brightkite table setup...
+DROP TABLE arcs_brightkite
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+
+Table created.
+
+DROP TABLE arcs_brightkite_ext
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+
+Table created.
+
+
+428156 rows created.
+
+DROP TABLE net_brightkite
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+
+Table created.
+
+Count arcs_brightkite, the source table that has links in both directions
+
+  COUNT(*)
+----------
+    428156
+
+Insert into net_brightkite using rownum as link id, and only inserting the links in 1 direction
+
+214078 rows created.
+
+PK on link_id
+
+Table altered.
+
+Unique index on node_id_fr, node_id_to
+
+Index created.
+
+Non-unique index on node_id_to
+
+Index created.
+
+Gather stats on net_brightkite
+
+PL/SQL procedure successfully completed.
+
+
+'END:'||TO_CHAR(SYSDATE,'DD-MON-YY
+----------------------------------
+End: 26-AUG-2019 07:00:44
+

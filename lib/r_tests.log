@@ -1,0 +1,19 @@
+
+Database             Time                 Version
+-------------------- -------------------- ------------------------------
+Start: ORCL          26-AUG-2019 07:04:27 Version 18.3.0.0.0
+
+Create view links_v in lib schema (will be superseded by any view of same name defined in calling schema)
+
+View created.
+
+old   3:   Trapit_Run.Run_Tests('&LIB');
+new   3:   Trapit_Run.Run_Tests('lib');
+
+PL/SQL procedure successfully completed.
+
+
+'END:'||TO_CHAR(SYSDATE,'DD-MON-YY
+----------------------------------
+End: 26-AUG-2019 07:04:27
+
