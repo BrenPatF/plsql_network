@@ -64,7 +64,7 @@ purely_Wrap_API: Design pattern has the API call wrapped in a 'pure' function, c
                  whether as output parameters, or on database tables, etc. The inputs are also
                  extended from the API parameters to include any other effective inputs. Assertion 
                  takes place after all scenarios and is against the extended outputs, with extended
-                 inputs also listed. The API call is timed
+                 inputs also listed
 
 ***************************************************************************************************/
 FUNCTION purely_Wrap_API(
