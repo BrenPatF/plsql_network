@@ -38,15 +38,11 @@ FUNCTION cursor_To_List(
             p_delim                        VARCHAR2)     -- delimiter
             RETURN                         L1_chr_arr IS -- list of delimited records
   l_csr             SYS_REFCURSOR;
-  l_ret_value_lis   L1_chr_arr;
 BEGIN
 
   OPEN l_csr FOR p_cursor_text;
-
-  l_ret_value_lis := Utils.Cursor_To_List(x_csr    => l_csr,
-                                          p_delim  => p_delim);
-
-  RETURN l_ret_value_lis;
+  RETURN Utils.Cursor_To_List(x_csr    => l_csr,
+                              p_delim  => p_delim);
 
 END cursor_To_List;
 
