@@ -23,7 +23,7 @@ DRIVER SCRIPTS
 |  EXAMPLES                                                                                        |
 ----------------------------------------------------------------------------------------------------
 |  r_net            |  Net_Pipe     |  Script calls Net_Pipe pipelined function to display network |
-|                   |               |  structure within one detail query and two   aggregated      |
+|                   |               |  structure within one detail query and two aggregated        |
 |                   |               |  queries, based on the view links_v                          |
 ----------------------------------------------------------------------------------------------------
 |  main_fk          |  r_net        |  Recreates view links_v pointing to the foreign key example  |
