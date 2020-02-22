@@ -1,5 +1,8 @@
 # Net_Pipe
+<img src="mountains.png">
 Oracle PL/SQL network analysis module.
+
+:globe_with_meridians:
 
 The module contains a PL/SQL package for the efficient analysis of networks that can be specified
 by a view representing their node pair links. The package has a pipelined function that returns a
@@ -11,8 +14,18 @@ See [PL/SQL Pipelined Function for Network Analysis](http://aprogrammerwrites.eu
 
 The package is tested using the Math Function Unit Testing design pattern, with test results in HTML and text format included. See test_output\net_pipe.html for the unit test results root page. The module also comes with two example networks.
 
-## Usage - example for app schema foreign key network
-### Network detail
+## In this README...
+- [Usage - Example for app schema foreign key network](https://github.com/BrenPatF/plsql_network#usage---example-for-app-schema-foreign-key-network)
+- [API](https://github.com/BrenPatF/plsql_network#api)
+- [Installation](https://github.com/BrenPatF/plsql_network#installation)
+- [Unit Testing](https://github.com/BrenPatF/plsql_network#unit-testing)
+- [Operating System/Oracle Versions](https://github.com/BrenPatF/plsql_network#operating-systemoracle-versions)
+
+## Usage - Example for app schema foreign key network
+- [In this README...](https://github.com/BrenPatF/plsql_network#in-this-readme)
+- [Network Detail](https://github.com/BrenPatF/plsql_network#network-detail)
+- [Network Summary](https://github.com/BrenPatF/plsql_network#network-summary)
+### Network Detail
 ```sql
 SELECT root_node_id                                                            "Network",
        Count(DISTINCT link_id) OVER (PARTITION BY root_node_id) - 1            "#Links",
@@ -60,7 +73,8 @@ SDO_COORD_AXES|MDSYS     31     15   0 SDO_COORD_AXES|MDSYS                     
                                      3     < SDO_SRIDS_BY_URN|MDSYS                        sys_c006526|mdsys
 
 ```
-### Network summary
+### Network Summary
+- [Usage - Example for app schema foreign key network](https://github.com/BrenPatF/plsql_network#usage---example-for-app-schema-foreign-key-network)
 ```sql
 SELECT root_node_id            "Network",
        Count(DISTINCT link_id) "#Links",
@@ -98,6 +112,7 @@ SQL> @main_brightkite
 This is a fairly large example, the "Friendship network of Brightkite users", having 58,228 nodes and 214,078 links taken from: https://snap.stanford.edu/data/loc-brightkite.html. The analysis SQL ran in around 38 seconds at summary level on my laptop, and 85 seconds at detail level with 214,625 lines spooled.
 
 ## API
+- [In this README...](https://github.com/BrenPatF/plsql_network#in-this-readme)
 ### View links_v
 The pipelined function reads the network configuration by means of a view representing all the links in the network. The view must be created with three character fields, up to 100 characters long:
 - link_id
@@ -112,11 +127,18 @@ SELECT * FROM TABLE(Net_Pipe.All_Nets) ORDER BY line_no
 Options for formatting and aggregating the output can be seen in the usage section above.
 
 ## Installation
+- [In this README...](https://github.com/BrenPatF/plsql_network#in-this-readme)
+- [Install 1: Install Utils module (optional)](https://github.com/BrenPatF/plsql_network#install-1-install-utils-module-optional)
+- [Install 2: Create Net_Pipe components](https://github.com/BrenPatF/plsql_network#install-2-create-net_pipe-components)
+- [Install 3: Example networks (optional)](https://github.com/BrenPatF/plsql_network#install-3-example-networks-optional)
+- [Install 4: Install unit test code (optional)](https://github.com/BrenPatF/plsql_network#install-4-install-unit-test-code-optional)
+
 The base code consists of a PL/SQL package containing a pipelined function, and a view links_v pointing to network data. These can be easily installed into an existing schema following the steps in Install 2 below.
 
 The install steps below also allow for a fuller installation that  includes optional creation of new lib and app schemas, with example network structures and full unit testing. The `lib` schema refers to the schema in which the base package is installed, while the `app` schema refers to the schema where the package is called from and where the optional examples are installed (Install 3).
 
 ### Install 1: Install Utils module (optional)
+- [Installation](https://github.com/BrenPatF/plsql_network#installation)
 #### [Schema: lib; Folder: (Utils) lib]
 - Download and install the Utils module:
 [Utils on GitHub](https://github.com/BrenPatF/oracle_plsql_utils)
@@ -124,6 +146,7 @@ The install steps below also allow for a fuller installation that  includes opti
 This module allows for optional creation of new lib and app schemas. Both base and unit test Utils installs are required for the unit test Net_Pipe install (Install 4).
 
 ### Install 2: Create Net_Pipe components
+- [Installation](https://github.com/BrenPatF/plsql_network#installation)
 #### [Schema: lib; Folder: lib]
 - Run script from slqplus:
 ```
@@ -136,6 +159,7 @@ SQL> @grant_net_pipe_to_app schema
 The package reads the network from a view links_v and the install script above creates a 1-link dummy view. To run against any other network, simply recreate the view to point to the network data, as shown in the example scripts (Install 3).
 
 ### Install 3: Example networks (optional)
+- [Installation](https://github.com/BrenPatF/plsql_network#installation)
 #### Synonym [Schema: app; Folder: app]
 - Run script from slqplus to create the synonym to the lib package:
 ```
@@ -163,6 +187,7 @@ SQL> @main_brightkite
 ```
 
 ### Install 4: Install unit test code (optional)
+- [Installation](https://github.com/BrenPatF/plsql_network#installation)
 #### [Schema: lib; Folder: lib]
 This step requires the Trapit module option to have been installed as part of Install 1, and requires a minimum Oracle version of 12.2.
 - Copy the following file from the root folder to the server folder pointed to by the Oracle directory INPUT_DIR:
@@ -171,7 +196,12 @@ This step requires the Trapit module option to have been installed as part of In
 ```
 SQL> @install_net_pipe_tt
 ```
-## Unit testing
+## Unit Testing
+- [In this README...](https://github.com/BrenPatF/plsql_network#in-this-readme)
+- [Wrapper Function Diagram](https://github.com/BrenPatF/plsql_network#wrapper-function-diagram)
+- [Unit Test Summary Page](https://github.com/BrenPatF/plsql_network#unit-test-summary-page)
+- [Scenario 3 Network Diagram](https://github.com/BrenPatF/plsql_network#scenario-3-network-diagram)
+
 The unit test program (if installed) may be run from the lib subfolder:
 
 SQL> @r_tests
@@ -186,14 +216,28 @@ The three testing steps can easily be automated in Powershell (or Unix bash).
 
 The package is tested using the Math Function Unit Testing design pattern (`See also - Trapit` below). In this approach, a 'pure' wrapper function is constructed that takes input parameters and returns a value, and is tested within a loop over scenario records read from a JSON file.
 
-You can review the  unit test formatted results obtained by the author in the `test_output` subfolder [net_pipe.html is the root page for the HTML version and net_pipe.txt has the results in text format].
+### Wrapper Function Diagram
+- [Unit Testing](https://github.com/BrenPatF/plsql_network#unit-testing)
 
-There are two diagrams to illustrate the unit testing:
+This diagram shows the input/output structure of the pure unit test wrapper function:
+<img src="plsql_network - JSD.png">
 
-- plsql_network - JSD.png: shows the structure of the unit test wrapper function
-- plsql_network - Scenario 3.png: diagram of the 4-subnetwork network in scenario 3
+### Unit Test Summary Page
+- [Unit Testing](https://github.com/BrenPatF/plsql_network#unit-testing)
+
+This is an image of the unit test summary page, and it shows the scenarios tested.
+<img src="plsql_network_ut_root.png">
+
+### Scenario 3 Network Diagram
+- [Unit Testing](https://github.com/BrenPatF/plsql_network#unit-testing)
+
+This is a diagram of the 4-subnetwork network in scenario 3
+<img src="plsql_network - Scenario 3.png">
+
+You can review the formatted unit test results obtained by the author here, [Unit Test Report: net_pipe](http://htmlpreview.github.io/?https://github.com/BrenPatF/plsql_network/blob/master/test_output/net_pipe.html), and the files are available in the `test_output` subfolder [net_pipe.html is the root page for the HTML version and net_pipe.txt has the results in text format].
 
 ## Operating System/Oracle Versions
+- [In this README...](https://github.com/BrenPatF/plsql_network#in-this-readme)
 ### Windows
 Windows 10, should be OS-independent
 ### Oracle
