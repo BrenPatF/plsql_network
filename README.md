@@ -220,7 +220,7 @@ The package is tested using the Math Function Unit Testing design pattern (`See 
 - [Unit Testing](https://github.com/BrenPatF/plsql_network#unit-testing)
 
 This diagram shows the input/output structure of the pure unit test wrapper function:
-<img src="plsql_network - JSD.png">
+<img src="plsql_networkJSD.png">
 
 ### Unit Test Summary Page
 - [Unit Testing](https://github.com/BrenPatF/plsql_network#unit-testing)
