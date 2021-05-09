@@ -1,0 +1,39 @@
+{
+    "meta":  {
+                 "title":  "title",
+                 "delimiter":  "|",
+                 "inp":  {
+                             "Link":  [
+                                          "Link Id",
+                                          "Node Id From",
+                                          "Node Id To"
+                                      ]
+                         },
+                 "out":  {
+                             "Network":  [
+                                             "Root Node Id",
+                                             "Direction",
+                                             "Node Id",
+                                             "Link Id",
+                                             "Node Level",
+                                             "Loop Flag",
+                                             "Line Number"
+                                         ]
+                         }
+             },
+    "scenarios":  {
+                      "scenario 1":  {
+                                         "active_yn":  "Y",
+                                         "inp":  {
+                                                     "Link":  [
+                                                                  "||"
+                                                              ]
+                                                 },
+                                         "out":  {
+                                                     "Network":  [
+                                                                     "||||||"
+                                                                 ]
+                                                 }
+                                     }
+                  }
+}

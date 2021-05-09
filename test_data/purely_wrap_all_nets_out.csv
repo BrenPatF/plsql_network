@@ -1,0 +1,8 @@
+group,field
+Network,Root Node Id
+Network,Direction
+Network,Node Id
+Network,Link Id
+Network,Node Level
+Network,Loop Flag
+Network,Line Number

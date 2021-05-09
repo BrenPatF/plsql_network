@@ -1,7 +1,7 @@
 
 Database             Time                 Version
 -------------------- -------------------- ------------------------------
-Start: ORCL          26-AUG-2019 07:00:22 Version 18.3.0.0.0
+Start: ORCL          09-MAY-2021 18:06:06 Version 19.3.0.0.0
 
 Foreign key table setup...
 DROP TABLE fk_links
@@ -16,7 +16,7 @@ Table created.
 
   COUNT(*)
 ----------
-        35
+        34
 
 Non-unique indexes on table_fr and table_to
 
@@ -32,5 +32,5 @@ PL/SQL procedure successfully completed.
 
 'END:'||TO_CHAR(SYSDATE,'DD-MON-YY
 ----------------------------------
-End: 26-AUG-2019 07:00:23
+End: 09-MAY-2021 18:06:12
 

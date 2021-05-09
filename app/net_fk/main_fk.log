@@ -1,7 +1,7 @@
 
 Database             Time                 Version
 -------------------- -------------------- ------------------------------
-Start: ORCL          26-AUG-2019 07:00:29 Version 18.3.0.0.0
+Start: ORCL          09-MAY-2021 18:06:21 Version 19.3.0.0.0
 
 View links_v based on fk_links
 
@@ -12,9 +12,7 @@ Network detail
 Network                                     #Links  #Nodes    Lev Node                                                                   Link
 ------------------------------------------ ------- ------- ------ ---------------------------------------------------------------------- ------------------------------------------
 DR$THS_PHRASE|CTXSYS                             1       2      0 DR$THS_PHRASE|CTXSYS                                                   ROOT
-                                                                1 > DR$THS|CTXSYS                                                        sys_c005869|ctxsys
-LOG_HEADERS|BENCH                                1       2      0 LOG_HEADERS|BENCH                                                      ROOT
-                                                                1 < LOG_LINES|BENCH                                                      lin_hdr_fk|bench
+                                                                1 > DR$THS|CTXSYS                                                        sys_c005993|ctxsys
 OGIS_GEOMETRY_COLUMNS|MDSYS                      1       2      0 OGIS_GEOMETRY_COLUMNS|MDSYS                                            ROOT
                                                                 1 > OGIS_SPATIAL_REFERENCE_SYSTEMS|MDSYS                                 fk_srid|mdsys
 SDO_COORD_AXES|MDSYS                            31      15      0 SDO_COORD_AXES|MDSYS                                                   ROOT
@@ -48,34 +46,33 @@ SDO_COORD_AXES|MDSYS                            31      15      0 SDO_COORD_AXES
                                                                 3     = SDO_COORD_REF_SYS|MDSYS*                                         coord_ref_sys_foreign_horiz|mdsys
                                                                 3     = SDO_COORD_REF_SYS|MDSYS*                                         coord_ref_sys_foreign_legacy|mdsys
                                                                 3     = SDO_COORD_REF_SYS|MDSYS*                                         coord_ref_sys_foreign_vert|mdsys
-                                                                3     < SDO_SRIDS_BY_URN|MDSYS                                           sys_c006526|mdsys
+                                                                3     < SDO_SRIDS_BY_URN|MDSYS                                           sys_c006633|mdsys
 SDO_WS_CONFERENCE_PARTICIPANTS|MDSYS             1       2      0 SDO_WS_CONFERENCE_PARTICIPANTS|MDSYS                                   ROOT
                                                                 1 > SDO_WS_CONFERENCE|MDSYS                                              sdo_ws_conf_part_fk|mdsys
 
-40 rows selected.
+38 rows selected.
 
-Elapsed: 00:00:00.05
+Elapsed: 00:00:00.06
 Network summary 1 - by subnetwork
 
 Network                                     #Links  #Nodes    Max Lev
 ------------------------------------------ ------- ------- ----------
 DR$THS_PHRASE|CTXSYS                             2       2          1
-LOG_HEADERS|BENCH                                2       2          1
 SDO_WS_CONFERENCE_PARTICIPANTS|MDSYS             2       2          1
 OGIS_GEOMETRY_COLUMNS|MDSYS                      2       2          1
 SDO_COORD_AXES|MDSYS                            32      15         12
 
-Elapsed: 00:00:00.00
+Elapsed: 00:00:00.01
 Network summary 2 - grouped by numbers of nodes
 
  #Nodes  #Networks
 ------- ----------
-      2          4
+      2          3
      15          1
 
 Elapsed: 00:00:00.01
 
 'END:'||TO_CHAR(SYSDATE,'DD-MON-YY
 ----------------------------------
-End: 26-AUG-2019 07:00:29
+End: 09-MAY-2021 18:06:21
 

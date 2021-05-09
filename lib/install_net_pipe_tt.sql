@@ -19,29 +19,29 @@ unit testing.
 INSTALL SCRIPTS
 ====================================================================================================
 |  Script                     |  Notes                                                             |
-|===================================================================================================
+|==================================================================================================|
 |  BASE                                                                                            |
-----------------------------------------------------------------------------------------------------
+|--------------------------------------------------------------------------------------------------|
 |  install_net_pipe.sql       |  Creates Net_Pipe package, in lib schema, with grants to app       |
-----------------------------------------------------------------------------------------------------
+|-----------------------------|--------------------------------------------------------------------|
 |  grant_net_pipe_to_app.sql  |  Grants privileges on Net_Pipe components from lib to app schema   |
-----------------------------------------------------------------------------------------------------
+|-----------------------------|--------------------------------------------------------------------|
 |  c_net_pipe_syns.sql        |  Creates synonyms for Net_Pipe components in app schema to lib     |
 |                             |  schema                                                            |
-----------------------------------------------------------------------------------------------------
+|--------------------------------------------------------------------------------------------------|
 |  EXAMPLES                                                                                        |
-----------------------------------------------------------------------------------------------------
+|--------------------------------------------------------------------------------------------------|
 |  install_fk.sql             |  Installs foreign key example network in app. This copies          |
 |                             |  information from the Oracle view all_constraints into table       |
 |                             |  fk_link to represent foreign key links as a network. The links    |
 |                             |  visible in the Oracle view depend on the tables readable by app   |
-----------------------------------------------------------------------------------------------------
+|-----------------------------|--------------------------------------------------------------------|
 |  install_brightkite.sql     |  Installs example "Friendship network of Brightkite users" in app  |
 |                             |  schema, large example having 58,228 nodes and 214,078 links from: |
 |                             |  https://snap.stanford.edu/data/loc-brightkite.html                |
-----------------------------------------------------------------------------------------------------
+|--------------------------------------------------------------------------------------------------|
 |  UNIT TEST                                                                                       |
-----------------------------------------------------------------------------------------------------
+|--------------------------------------------------------------------------------------------------|
 | *install_net_pipe_tt.sql*   |  Creates unit test components that require a minimum Oracle        |
 |                             |  database version of 12.2 in lib schema                            |
 ====================================================================================================
@@ -88,7 +88,12 @@ PROMPT Add the tt_units record, reading in JSON file from INPUT_DIR
 DEFINE LIB=lib
 BEGIN
 
-  Trapit.Add_Ttu ('TT_NET_PIPE', 'ALL_NETS', '&LIB', 'Y', 'tt_net_pipe.all_nets_inp.json');
+  Trapit.Add_Ttu(
+            p_unit_test_package_nm         => 'TT_NET_PIPE',
+            p_purely_wrap_api_function_nm  => 'Purely_Wrap_All_Nets', 
+            p_group_nm                     => '&LIB',
+            p_active_yn                    => 'Y', 
+            p_input_file                   => 'tt_net_pipe.purely_wrap_all_nets_inp.json');
 
 END;
 /
