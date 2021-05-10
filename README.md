@@ -233,7 +233,7 @@ SQL> @install_net_pipe_tt
 
 The package is tested using the Math Function Unit Testing design pattern, described here: [The Math Function Unit Testing design pattern, implemented in nodejs](https://github.com/BrenPatF/trapit_nodejs_tester#trapit). In this approach, a 'pure' wrapper function is constructed that takes input parameters and returns a value, and is tested within a loop over scenario records read from a JSON file.
 
-The program is data-driven from the input file tt_utils.purely_wrap_utils_inp.json and produces an output file, tt_utils.purely_wrap_utils_out.json (in the Oracle directory `INPUT_DIR`), that contains arrays of expected and actual records by group and scenario.
+The program is data-driven from the input file tt_utils.purely_wrap_all_nets_inp.json and produces an output file, tt_utils.purely_wrap_all_nets_out.json (in the Oracle directory `INPUT_DIR`), that contains arrays of expected and actual records by group and scenario.
 
 The unit test program may be run from the Oracle lib subfolder:
 
@@ -241,7 +241,7 @@ The unit test program may be run from the Oracle lib subfolder:
 SQL> @r_tests
 ```
 
-The output file is processed by a nodejs program that has to be installed separately from the `npm` nodejs repository, as described in the Trapit install in `Install 1` above. The nodejs program produces listings of the results in HTML and/or text format, and a sample set of listings is included in the subfolder test_output. To run the processor, open a powershell window in the npm trapit package folder after placing the output JSON file, tt_utils.purely_wrap_utils_out.json, in the subfolder ./examples/externals and run:
+The output file is processed by a nodejs program that has to be installed separately from the `npm` nodejs repository, as described in the Trapit install in `Install 1` above. The nodejs program produces listings of the results in HTML and/or text format, and a sample set of listings is included in the subfolder test_output. To run the processor, open a powershell window in the npm trapit package folder after placing the output JSON file, tt_utils.purely_wrap_all_nets_out.json, in the subfolder ./examples/externals and run:
 
 ```
 $ node ./examples/externals/test-externals
@@ -285,7 +285,7 @@ You can review the formatted unit test results obtained by the author here, [Uni
 This is a diagram of the 4-subnetwork network in scenario 3
 <img src="plsql_network - Scenario 3.png">
 
-You can review the formatted unit test results obtained by the author here, [Unit Test Report: net_pipe](http://htmlpreview.github.io/?https://github.com/BrenPatF/plsql_network/blob/master/test_output/net_pipe.html), and the files are available in the `test_output` subfolder [net_pipe.html is the root page for the HTML version and net_pipe.txt has the results in text format].
+You can review the formatted unit test results here, [Unit Test Report: Oracle PL/SQL Network Analysis](http://htmlpreview.github.io/?https://github.com/BrenPatF/plsql_network/blob/master/test_data/test_output/oracle-pl_sql-network-analysis/oracle-pl_sql-network-analysis.html), and the files are available in the `test_data\test_output\oracle-pl_sql-network-analysis` subfolder [oracle-pl_sql-network-analysis.html is the root page for the HTML version and oracle-pl_sql-network-analysis.txt has the results in text format].
 
 ## Operating System/Oracle Versions
 - [In this README...](https://github.com/BrenPatF/plsql_network#in-this-readme)
