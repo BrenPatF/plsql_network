@@ -277,15 +277,13 @@ The summary report in text format shows the scenarios tested:
       2    1 loop, 100ch names             0             SUCCESS
       3    4 subnetworks, looped and tree  0             SUCCESS
 
-You can review the formatted unit test results obtained by the author here, [Unit Test Report: utils](http://htmlpreview.github.io/?https://github.com/BrenPatF/oracle_plsql_utils/blob/master/test_output/oracle-pl_sql-utilities.html), and the files are available in the `test_data\test_output` subfolder [oracle-pl_sql-utilities.html is the root page for the HTML version and oracle-pl_sql-utilities.txt has the results in text format].
+You can review the formatted unit test results here, [Unit Test Report: Oracle PL/SQL Network Analysis](http://htmlpreview.github.io/?https://github.com/BrenPatF/plsql_network/blob/master/test_data/test_output/oracle-pl_sql-network-analysis/oracle-pl_sql-network-analysis.html), and the files are available in the `test_data\test_output\oracle-pl_sql-network-analysis` subfolder [oracle-pl_sql-network-analysis.html is the root page for the HTML version and oracle-pl_sql-network-analysis.txt has the results in text format].
 
 #### Scenario 3 Network Diagram
 - [Scenarios](https://github.com/BrenPatF/plsql_network#scenarios)
 
 This is a diagram of the 4-subnetwork network in scenario 3
 <img src="plsql_network - Scenario 3.png">
-
-You can review the formatted unit test results here, [Unit Test Report: Oracle PL/SQL Network Analysis](http://htmlpreview.github.io/?https://github.com/BrenPatF/plsql_network/blob/master/test_data/test_output/oracle-pl_sql-network-analysis/oracle-pl_sql-network-analysis.html), and the files are available in the `test_data\test_output\oracle-pl_sql-network-analysis` subfolder [oracle-pl_sql-network-analysis.html is the root page for the HTML version and oracle-pl_sql-network-analysis.txt has the results in text format].
 
 ## Operating System/Oracle Versions
 - [In this README...](https://github.com/BrenPatF/plsql_network#in-this-readme)
