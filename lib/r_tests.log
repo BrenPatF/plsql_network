@@ -1,7 +1,7 @@
 
 Database             Time                 Version
 -------------------- -------------------- ------------------------------
-Start: ORCL          09-MAY-2021 18:09:07 Version 19.3.0.0.0
+Start: ORCL          18-MAY-2021 07:01:08 Version 19.3.0.0.0
 
 Create view links_v in lib schema (will be superseded by any view of same name defined in calling schema)
 
@@ -15,5 +15,5 @@ PL/SQL procedure successfully completed.
 
 'END:'||TO_CHAR(SYSDATE,'DD-MON-YY
 ----------------------------------
-End: 09-MAY-2021 18:09:57
+End: 18-MAY-2021 07:01:08
 

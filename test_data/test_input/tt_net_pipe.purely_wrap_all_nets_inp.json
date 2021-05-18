@@ -22,7 +22,7 @@
       }
    },
    "scenarios":{  
-      "1 link":{  
+      "2 node, 1 link tree":{  
          "active_yn":"Y",
          "inp":{  
             "Link":[  
@@ -36,7 +36,7 @@
             ]
          }
       },
-      "1 loop, 100ch names":{  
+      "1 node, 1 link self-loop, 100ch names":{  
          "active_yn":"Y",
          "inp":{  
             "Link":[  
@@ -50,7 +50,7 @@
             ]
          }
       },
-      "4 subnetworks, looped and tree":{  
+      "4 subnetworks, 2/3 node loops, 3 node linear/4 node nonlinear trees":{  
          "active_yn":"Y",
          "inp":{  
             "Link":[  

@@ -1,17 +1,17 @@
 Unit Test Report: Oracle PL/SQL Network Analysis
 ================================================
 
-      #    Scenario                        Fails (of 1)  Status 
-      ---  ------------------------------  ------------  -------
-      1    1 link                          0             SUCCESS
-      2    1 loop, 100ch names             0             SUCCESS
-      3    4 subnetworks, looped and tree  0             SUCCESS
+      #    Scenario                                                             Fails (of 1)  Status 
+      ---  -------------------------------------------------------------------  ------------  -------
+      1    2 node, 1 link tree                                                  0             SUCCESS
+      2    1 node, 1 link self-loop, 100ch names                                0             SUCCESS
+      3    4 subnetworks, 2/3 node loops, 3 node linear/4 node nonlinear trees  0             SUCCESS
 
 Test scenarios: 0 failed of 3: SUCCESS
 ======================================
 
-SCENARIO 1: 1 link {
-====================
+SCENARIO 1: 2 node, 1 link tree {
+=================================
 
    INPUTS
    ======
@@ -43,8 +43,8 @@ SCENARIO 1: 1 link {
 } 0 failed of 1: SUCCESS
 ========================
 
-SCENARIO 2: 1 loop, 100ch names {
-=================================
+SCENARIO 2: 1 node, 1 link self-loop, 100ch names {
+===================================================
 
    INPUTS
    ======
@@ -76,8 +76,8 @@ SCENARIO 2: 1 loop, 100ch names {
 } 0 failed of 1: SUCCESS
 ========================
 
-SCENARIO 3: 4 subnetworks, looped and tree {
-============================================
+SCENARIO 3: 4 subnetworks, 2/3 node loops, 3 node linear/4 node nonlinear trees {
+=================================================================================
 
    INPUTS
    ======
