@@ -308,7 +308,7 @@ Check different types of tree
 #### Scenario Results
 - [&uarr; Unit Test Scenarios](https://github.com/BrenPatF/plsql_network#unit-test-scenarios)
 - [Results Summary](https://github.com/BrenPatF/plsql_network#results-summary)
-- [Results for Scenario 3: 4 subnetworks, 2/3 node loops, 3 node linear/4 node nonlinear trees](https://github.com/BrenPatF/plsql_network#results-for-scenario-3-4-subnetworks--2-3-node-loops--3-node-linear-4-node-nonlinear-trees)
+- [Results for Scenario 3: 4 subnetworks, 2/3 node loops, 3 node linear/4 node nonlinear trees](https://github.com/BrenPatF/plsql_network#results-for-scenario-3-4-subnetworks-23-node-loops-3-node-linear4-node-nonlinear-trees)
 
 ##### Results Summary
 - [&uarr; Scenario Results](https://github.com/BrenPatF/plsql_network#scenario-results)
