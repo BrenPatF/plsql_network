@@ -315,7 +315,7 @@ Check different types of tree
 
 The summary report in text format shows the scenarios tested:
 
-      #    Scenario                                                             Fails (of 1)  Status 
+      #    Scenario                                                             Fails (of 2)  Status 
       ---  -------------------------------------------------------------------  ------------  -------
       1    2 node, 1 link tree                                                  0             SUCCESS
       2    1 node, 1 link self-loop, 100ch names                                0             SUCCESS
@@ -378,7 +378,10 @@ SCENARIO 3: 4 subnetworks, 2/3 node loops, 3 node linear/4 node nonlinear trees 
       } 0 failed of 14: SUCCESS
       =========================
 
-} 0 failed of 1: SUCCESS
+      GROUP 2: Unhandled Exception: Empty as expected: SUCCESS
+      ========================================================
+
+} 0 failed of 2: SUCCESS
 ========================
 </pre>
 

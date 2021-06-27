@@ -1,11 +1,14 @@
 
 Database             Time                 Version
 -------------------- -------------------- ------------------------------
-Start: ORCL          18-MAY-2021 07:01:03 Version 19.3.0.0.0
+Start: ORCL          27-JUN-2021 12:41:46 Version 19.3.0.0.0
 
 Create empty links table in lib schema
+DROP TABLE network_links
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist
 
-Table dropped.
 
 
 Table created.
@@ -27,5 +30,5 @@ PL/SQL procedure successfully completed.
 
 'END:'||TO_CHAR(SYSDATE,'DD-MON-YY
 ----------------------------------
-End: 18-MAY-2021 07:01:03
+End: 27-JUN-2021 12:41:46
 
