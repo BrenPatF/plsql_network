@@ -241,10 +241,12 @@ The unit test program may be run from the Oracle lib subfolder:
 SQL> @r_tests
 ```
 
-The output file is processed by a nodejs program that has to be installed separately from the `npm` nodejs repository, as described in the Trapit install in `Install 1` above. The nodejs program produces listings of the results in HTML and/or text format, and a sample set of listings is included in the subfolder test_output. To run the processor, open a powershell window in the npm trapit package folder after placing the output JSON file, tt_utils.purely_wrap_all_nets_out.json, in the subfolder ./examples/externals and run:
+The output file is processed by a nodejs program that has to be installed separately from the `npm` nodejs repository, as described in the Trapit install in `Install 1` above. The nodejs program produces listings of the results in HTML and/or text format, and a sample set of listings is included in the subfolder test_output.
+
+To run the processor, open a powershell window in the npm trapit package folder after placing the output JSON file, tt_utils.purely_wrap_all_nets_out.json, in a new (or existing) folder, oracle_plsql (say), within the trapit subfolder externals and run:
 
 ```
-$ node ./examples/externals/test-externals
+$ node externals\format-externals oracle_plsql
 ```
 
 This creates, or updates, a subfolder, oracle-pl_sql-network-analysis, with the formatted results output files. The three testing steps can easily be automated in Powershell (or Unix bash).
