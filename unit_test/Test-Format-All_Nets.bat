@@ -1,0 +1,1 @@
+pwsh -file .\Test-Format-All_Nets.ps1  > .\Test-Format-All_Nets.out 2> .\Test-Format-All_Nets.err

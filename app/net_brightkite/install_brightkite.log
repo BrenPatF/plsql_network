@@ -1,23 +1,17 @@
 
 Database             Time                 Version
 -------------------- -------------------- ------------------------------
-Start: ORCL          09-MAY-2021 18:06:40 Version 19.3.0.0.0
+Start: ORCL          29-MAY-2023 08:15:28 Version 21.3.0.0.0
 
 Brightkite table setup...
-DROP TABLE arcs_brightkite
-           *
-ERROR at line 1:
-ORA-00942: table or view does not exist
 
+Table dropped.
 
 
 Table created.
 
-DROP TABLE arcs_brightkite_ext
-           *
-ERROR at line 1:
-ORA-00942: table or view does not exist
 
+Table dropped.
 
 
 Table created.
@@ -25,11 +19,8 @@ Table created.
 
 428156 rows created.
 
-DROP TABLE net_brightkite
-           *
-ERROR at line 1:
-ORA-00942: table or view does not exist
 
+Table dropped.
 
 
 Table created.
@@ -63,5 +54,5 @@ PL/SQL procedure successfully completed.
 
 'END:'||TO_CHAR(SYSDATE,'DD-MON-YY
 ----------------------------------
-End: 09-MAY-2021 18:06:43
+End: 29-MAY-2023 08:15:33
 

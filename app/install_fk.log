@@ -1,0 +1,36 @@
+
+Database             Time                 Version
+-------------------- -------------------- ------------------------------
+Start: ORCL          29-MAY-2023 07:12:01 Version 21.3.0.0.0
+
+Foreign key table setup...
+DROP TABLE fk_links
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+
+Table created.
+
+
+  COUNT(*)
+----------
+        34
+
+Non-unique indexes on table_fr and table_to
+
+Index created.
+
+
+Index created.
+
+Gather stats on fk_links
+
+PL/SQL procedure successfully completed.
+
+
+'END:'||TO_CHAR(SYSDATE,'DD-MON-YY
+----------------------------------
+End: 29-MAY-2023 07:12:05
+

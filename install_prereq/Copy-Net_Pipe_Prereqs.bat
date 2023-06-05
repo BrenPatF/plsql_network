@@ -1,0 +1,1 @@
+pwsh -file .\Copy-Net_Pipe_Prereqs.ps1  > .\Copy-Net_Pipe_Prereqs.out 2> .\Copy-Net_Pipe_Prereqs.err

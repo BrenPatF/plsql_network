@@ -1,0 +1,50 @@
+
+Database             Time                 Version
+-------------------- -------------------- ------------------------------
+Start: ORCL          29-MAY-2023 07:11:24 Version 21.3.0.0.0
+
+bacon_numbers table setup...
+DROP TABLE bacon_numbers_ext
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+
+Table created.
+
+DROP TABLE arcs_bacon_numbers
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+
+Table created.
+
+
+3396 rows created.
+
+Count arcs_bacon_numbers
+
+  COUNT(*)
+----------
+      3396
+
+PK on link_id
+
+Table altered.
+
+Non-unique index on node_id_to
+
+Index created.
+
+Gather stats on arcs_bacon_numbers
+
+PL/SQL procedure successfully completed.
+
+
+'END:'||TO_CHAR(SYSDATE,'DD-MON-YY
+----------------------------------
+End: 29-MAY-2023 07:11:29
+

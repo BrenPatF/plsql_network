@@ -1,0 +1,1 @@
+pwsh -file .\Copy-DataFilesToInput.ps1  > .\Copy-DataFilesToInput.out 2> .\Copy-DataFilesToInput.err

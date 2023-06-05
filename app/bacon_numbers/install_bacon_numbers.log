@@ -1,0 +1,44 @@
+
+Database             Time                 Version
+-------------------- -------------------- ------------------------------
+Start: ORCL          29-MAY-2023 08:04:39 Version 21.3.0.0.0
+
+bacon_numbers table setup...
+
+Table dropped.
+
+
+Table created.
+
+
+Table dropped.
+
+
+Table created.
+
+
+3396 rows created.
+
+Count arcs_bacon_numbers
+
+  COUNT(*)
+----------
+      3396
+
+PK on link_id
+
+Table altered.
+
+Non-unique index on node_id_to
+
+Index created.
+
+Gather stats on arcs_bacon_numbers
+
+PL/SQL procedure successfully completed.
+
+
+'END:'||TO_CHAR(SYSDATE,'DD-MON-YY
+----------------------------------
+End: 29-MAY-2023 08:04:42
+

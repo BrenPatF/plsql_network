@@ -55,6 +55,7 @@ COLUMN "Lev"            FORMAT 99990
 COLUMN "#Links"         FORMAT 999990
 COLUMN "#Nodes"         FORMAT 999990
 COLUMN "Node"           FORMAT A70
+COLUMN "Node"           FORMAT A85
 
 BREAK ON "Network" ON "#Links" ON "#Nodes"
 

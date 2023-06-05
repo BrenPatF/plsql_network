@@ -35,44 +35,9 @@ that is processed by a separate nodejs program, npm package trapit (see README f
 
 The output JSON file contains arrays of expected and actual records by group and scenario, in the
 format expected by the nodejs program. This program produces listings of the results in HTML and/or
-text format, and a sample set of listings is included in the folder test_data\test_output
+text format, and a sample set of listings is included in the folder unit_test
 
 ***************************************************************************************************/
-
-/***************************************************************************************************
-
-add_Links: Insert link records to the network links table from an input array of triples
-
-***************************************************************************************************/
-PROCEDURE add_Links(
-            p_link_2lis                    L2_chr_arr) IS -- list of (from node, to node, link id) triples
-BEGIN
-
-  FOR i IN 1..p_link_2lis.COUNT LOOP
-
-    INSERT INTO network_links VALUES (p_link_2lis(i)(1), p_link_2lis(i)(2), p_link_2lis(i)(3));
-
-  END LOOP;
-
-END add_Links;
-
-/***************************************************************************************************
-
-cursor_To_List: Call Utils Cursor_To_List function, passing an open cursor, and delimiter, and 
-                return the resulting list of delimited records
-
-***************************************************************************************************/
-FUNCTION cursor_To_List(
-            p_cursor_text                  VARCHAR2)     -- cursor text
-            RETURN                         L1_chr_arr IS -- list of delimited records
-  l_csr             SYS_REFCURSOR;
-BEGIN
-
-  OPEN l_csr FOR p_cursor_text;
-  RETURN Utils.Cursor_To_List(x_csr    => l_csr,
-                              p_delim  => '|');
-
-END cursor_To_List;
 
 /***************************************************************************************************
 
@@ -90,12 +55,19 @@ FUNCTION Purely_Wrap_All_Nets(
             p_inp_3lis                     L3_chr_arr)   -- input list of lists (group, record, field)
             RETURN                         L2_chr_arr IS -- output list of lists (group, record)
 
-  l_act_2lis                     L2_chr_arr := L2_chr_arr();
+  l_act_2lis        L2_chr_arr := L2_chr_arr();
+  l_csr             SYS_REFCURSOR;
 BEGIN
 
-  add_Links(p_link_2lis => p_inp_3lis(1));
+  FOR i IN 1..p_inp_3lis(1).COUNT LOOP
+
+    INSERT INTO network_links VALUES (p_inp_3lis(1)(i)(1), p_inp_3lis(1)(i)(2), p_inp_3lis(1)(i)(3));
+
+  END LOOP;
+
   l_act_2lis.EXTEND;
-  l_act_2lis(1) := cursor_To_List(p_cursor_text => 'SELECT * FROM TABLE(Net_Pipe.All_Nets)');
+  OPEN l_csr FOR SELECT * FROM TABLE(Net_Pipe.All_Nets);
+  l_act_2lis(1) := Utils.Cursor_To_List(x_csr    => l_csr);
   ROLLBACK;
   RETURN l_act_2lis;
 

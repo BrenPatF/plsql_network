@@ -1,4 +1,4 @@
-@..\..\initspool install_fk
+@..\initspool install_fk
 /***************************************************************************************************
 Name: install_fk.sql                    Author: Brendan Furey                      Date: 24-Aug-2019
 
@@ -39,6 +39,11 @@ INSTALL SCRIPTS
 |  install_brightkite.sql     |  Installs example "Friendship network of Brightkite users" in app  |
 |                             |  schema, large example having 58,228 nodes and 214,078 links from: |
 |                             |  https://snap.stanford.edu/data/loc-brightkite.html                |
+|-----------------------------|--------------------------------------------------------------------|
+|  install_bacon_numbers.sql  |  Installs example "Bacon Numbers" in app schema, from a data set   |
+|                             |  of 1817 actor/film pairs that results in 161 nodes and 3,396      |
+|                             |  links from: http://cs.oberlin.edu/~gr151/imdb/imdb.small.txt      |
+|                             |  created by the Oberlin College Computer Science department        |
 |--------------------------------------------------------------------------------------------------|
 |  UNIT TEST                                                                                       |
 |--------------------------------------------------------------------------------------------------|
@@ -94,4 +99,4 @@ DBMS_Stats.Gather_Table_Stats(
                 tabname                 => 'fk_links');
 END;
 /
-@..\..\endspool
+@..\endspool

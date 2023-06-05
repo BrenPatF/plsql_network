@@ -1,7 +1,7 @@
 
 Database             Time                 Version
 -------------------- -------------------- ------------------------------
-Start: ORCL          09-MAY-2021 18:06:06 Version 19.3.0.0.0
+Start: ORCL          26-MAY-2023 15:32:37 Version 21.3.0.0.0
 
 Foreign key table setup...
 DROP TABLE fk_links
@@ -32,5 +32,5 @@ PL/SQL procedure successfully completed.
 
 'END:'||TO_CHAR(SYSDATE,'DD-MON-YY
 ----------------------------------
-End: 09-MAY-2021 18:06:12
+End: 26-MAY-2023 15:32:47
 

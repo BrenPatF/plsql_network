@@ -1,0 +1,14 @@
+Category Set,Scenario,Active
+Value Size,Small names,Y
+Value Size,Large names,Y
+Link Multiplicity,One link,Y
+Link Multiplicity,Multiple links,Y
+Subnetwork Multiplicity,One subnetwork,Y
+Subnetwork Multiplicity,Multiple subnetworks,Y
+Loops or Tree,Has loops,Y
+Loops or Tree,Tree only,Y
+Loop Type,Has self-loop,Y
+Loop Type,Has 2-node loop,Y
+Loop Type,Has 3-node loop,Y
+Tree Type,Has linear tree,Y
+Tree Type,Has nonlinear tree   ,Y

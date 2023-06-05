@@ -1,0 +1,208 @@
+{
+  "meta": {
+    "title": "title",
+    "delimiter": "|",
+    "inp": {
+      "Link": [
+        "Link Id",
+        "Node Id From",
+        "Node Id To"
+      ]
+    },
+    "out": {
+      "Network": [
+        "Root Node Id",
+        "Direction",
+        "Node Id",
+        "Link Id",
+        "Node Level",
+        "Loop Flag",
+        "Line Number"
+      ]
+    }
+  },
+  "scenarios": {
+    "Small names": {
+      "active_yn": "Y",
+      "category_set": "Value Size",
+      "inp": {
+        "Link": [
+          "Link 1|Node 1|Node 2"
+        ]
+      },
+      "out": {
+        "Network": [
+          "Node 1||Node 1|Link 1|1||1"
+        ]
+      }
+    },
+    "Large names": {
+      "active_yn": "Y",
+      "category_set": "Value Size",
+      "inp": {
+        "Link": [
+          "Link 1|Node 1|Node 2"
+        ]
+      },
+      "out": {
+        "Network": [
+          "Node 1||Node 1|Link 1|1||1"
+        ]
+      }
+    },
+    "One link": {
+      "active_yn": "Y",
+      "category_set": "Link Multiplicity",
+      "inp": {
+        "Link": [
+          "Link 1|Node 1|Node 2"
+        ]
+      },
+      "out": {
+        "Network": [
+          "Node 1||Node 1|Link 1|1||1"
+        ]
+      }
+    },
+    "Multiple links": {
+      "active_yn": "Y",
+      "category_set": "Link Multiplicity",
+      "inp": {
+        "Link": [
+          "Link 1|Node 1|Node 2"
+        ]
+      },
+      "out": {
+        "Network": [
+          "Node 1||Node 1|Link 1|1||1"
+        ]
+      }
+    },
+    "One subnetwork": {
+      "active_yn": "Y",
+      "category_set": "Subnetwork Multiplicity",
+      "inp": {
+        "Link": [
+          "Link 1|Node 1|Node 2"
+        ]
+      },
+      "out": {
+        "Network": [
+          "Node 1||Node 1|Link 1|1||1"
+        ]
+      }
+    },
+    "Multiple subnetworks": {
+      "active_yn": "Y",
+      "category_set": "Subnetwork Multiplicity",
+      "inp": {
+        "Link": [
+          "Link 1|Node 1|Node 2"
+        ]
+      },
+      "out": {
+        "Network": [
+          "Node 1||Node 1|Link 1|1||1"
+        ]
+      }
+    },
+    "Has loops": {
+      "active_yn": "Y",
+      "category_set": "Loops or Tree",
+      "inp": {
+        "Link": [
+          "Link 1|Node 1|Node 2"
+        ]
+      },
+      "out": {
+        "Network": [
+          "Node 1||Node 1|Link 1|1||1"
+        ]
+      }
+    },
+    "Tree only": {
+      "active_yn": "Y",
+      "category_set": "Loops or Tree",
+      "inp": {
+        "Link": [
+          "Link 1|Node 1|Node 2"
+        ]
+      },
+      "out": {
+        "Network": [
+          "Node 1||Node 1|Link 1|1||1"
+        ]
+      }
+    },
+    "Has self-loop": {
+      "active_yn": "Y",
+      "category_set": "Loop Type",
+      "inp": {
+        "Link": [
+          "Link 1|Node 1|Node 2"
+        ]
+      },
+      "out": {
+        "Network": [
+          "Node 1||Node 1|Link 1|1||1"
+        ]
+      }
+    },
+    "Has 2-node loop": {
+      "active_yn": "Y",
+      "category_set": "Loop Type",
+      "inp": {
+        "Link": [
+          "Link 1|Node 1|Node 2"
+        ]
+      },
+      "out": {
+        "Network": [
+          "Node 1||Node 1|Link 1|1||1"
+        ]
+      }
+    },
+    "Has 3-node loop": {
+      "active_yn": "Y",
+      "category_set": "Loop Type",
+      "inp": {
+        "Link": [
+          "Link 1|Node 1|Node 2"
+        ]
+      },
+      "out": {
+        "Network": [
+          "Node 1||Node 1|Link 1|1||1"
+        ]
+      }
+    },
+    "Has linear tree": {
+      "active_yn": "Y",
+      "category_set": "Tree Type",
+      "inp": {
+        "Link": [
+          "Link 1|Node 1|Node 2"
+        ]
+      },
+      "out": {
+        "Network": [
+          "Node 1||Node 1|Link 1|1||1"
+        ]
+      }
+    },
+    "Has nonlinear tree   ": {
+      "active_yn": "Y",
+      "category_set": "Tree Type",
+      "inp": {
+        "Link": [
+          "Link 1|Node 1|Node 2"
+        ]
+      },
+      "out": {
+        "Network": [
+          "Node 1||Node 1|Link 1|1||1"
+        ]
+      }
+    }
+  }
+}
