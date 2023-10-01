@@ -1,7 +1,7 @@
 
 Database             Time                 Version
 -------------------- -------------------- ------------------------------
-Start: ORCL          29-MAY-2023 07:12:54 Version 21.3.0.0.0
+Start: ORCL          01-OCT-2023 14:39:51 Version 21.3.0.0.0
 
 Create empty links table in lib schema
 DROP TABLE network_links
@@ -18,9 +18,14 @@ Create package tt_net_pipe
 Package created.
 
 
-Package body created.
+Warning: Package Body created with compilation errors.
 
-No errors.
+Errors for PACKAGE BODY TT_NET_PIPE:
+
+LINE/COL ERROR
+-------- -----------------------------------------------------------------
+69/18    PL/SQL: SQL Statement ignored
+69/38    PL/SQL: ORA-00904: "NET_PIPE"."ALL_NETS": invalid identifier
 Add the tt_units record, reading in JSON file from INPUT_DIR
 old   6:             p_group_nm                     => '&LIB',
 new   6:             p_group_nm                     => 'lib',
@@ -30,5 +35,5 @@ PL/SQL procedure successfully completed.
 
 'END:'||TO_CHAR(SYSDATE,'DD-MON-YY
 ----------------------------------
-End: 29-MAY-2023 07:12:56
+End: 01-OCT-2023 14:39:51
 
